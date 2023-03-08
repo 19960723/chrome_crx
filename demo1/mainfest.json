@@ -1,0 +1,57 @@
+{
+  "manifest_version": 2,
+  "name": "lxl_test",
+  "version": "1.0.0",
+  "description": "test",
+  "icons": {
+    "16": "image/icon.png",
+		"48": "image/icon.png",
+		"128": "image/icon.png"
+  },
+  "default_locale": "zh_CN",
+  "browser_action": {
+    "default_icon": "image/icon.png",
+		"default_title": "这是一个示例Chrome插件",
+		"default_popup": "html/popup.html"
+  },
+  "page_action": {
+  },
+  "theme": {},
+  "background": {
+    "scripts": [
+      "lib/jquery-3.6.3.min.js",
+      "js/background.js"
+    ],
+    "page": "html/background.html"
+  },
+  "chrome_url_overrides": {},
+ 
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": [
+          "css/custom.css"
+      ],
+      "js": [
+          "lib/jquery-3.6.3.min.js",
+          "js/content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  
+  "content_security_policy": "",
+  "file_browser_handlers": [],
+  "homepage_url": "",
+  "incognito": "",
+  "nacl_modules": [],
+  "offline_enabled": true,
+
+  "options_page": "",
+  "permissions": [],
+  "plugins": [],
+  "requirements": {},
+
+  "update_url": "",
+  "web_accessible_resources": []
+}
