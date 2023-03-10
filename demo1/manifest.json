@@ -42,6 +42,11 @@
           "js/content.js"
       ],
       "run_at": "document_idle"
+    },
+    {
+      "matches": ["https://www.zhihu.com/hot"],
+      "js": ["lib/jquery-3.6.3.min.js", "js/zhihu-content.js"],
+      "run_at": "document_end"
     }
   ]
 }
